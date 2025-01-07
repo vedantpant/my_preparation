@@ -249,9 +249,39 @@
 #
 # print(segregate0and1(arr))
 
-num = 11
+# arr = [0, 1, 2, 0, 1, 2]
+#
+#
+# def sort_arr_ascending(arr):
+#     n = len(arr)
+#     count1 = 0
+#     count2 = 0
+#     for i in range(n):
+#         if arr[i] == 0:
+#             count1 += 1
+#         elif arr[i] == 1:
+#             count2 += 1
+#
+#     for i in range(n):
+#         if i < count1:
+#             arr[i] = 0
+#         elif i < count1 + count2:
+#             arr[i] = 1
+#         else:
+#             arr[i] = 2
+#
+#     return arr
+#
+# print(sort_arr_ascending(arr))
 
+def is_prime(n):
+    if n <= 1:
+        return False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+            else:
+                return True
 
-
-
-
+print(is_prime(5))
