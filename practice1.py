@@ -274,14 +274,42 @@
 #
 # print(sort_arr_ascending(arr))
 
-def is_prime(n):
-    if n <= 1:
-        return False
-    else:
-        for i in range(2, n):
-            if n % i == 0:
-                return False
-            else:
-                return True
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+#     else:
+#         for i in range(2, n):
+#             if n % i == 0:
+#                 return False
+#             else:
+#                 return True
+#
+# print(is_prime(10))
 
-print(is_prime(5))
+# import copy
+#
+# original_list = [[1, 2, 3], [4, 5, 6]]
+# shallow_copy = copy.copy(original_list)
+# shallow_copy[0][0] = 99
+# print("Original List (After Shallow Copy Modification):", original_list)
+#
+# # Deep Copy Example
+# deep_copy = copy.deepcopy(original_list)
+# deep_copy[0][0] = 42
+# print("Deep Copy List:", deep_copy)
+# print("Original List (After Deep Copy Modification):", original_list)
+
+def simple_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before function execution")
+        func(*args, **kwargs)
+        print("After function execution")
+
+    return wrapper
+
+
+@simple_decorator
+def say_hello():
+    print("Hello, World!")
+
+say_hello()
