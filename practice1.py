@@ -299,17 +299,70 @@
 # print("Deep Copy List:", deep_copy)
 # print("Original List (After Deep Copy Modification):", original_list)
 
-def simple_decorator(func):
-    def wrapper(*args, **kwargs):
-        print("Before function execution")
-        func(*args, **kwargs)
-        print("After function execution")
+# def simple_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         print("Before function execution")
+#         func(*args, **kwargs)
+#         print("After function execution")
+#
+#     return wrapper
+#
+#
+# @simple_decorator
+# def say_hello():
+#     print("Hello, World!")
+#
+# say_hello()
 
-    return wrapper
+# import requests
+#
+#
+# class APIClient:
+#
+#     def __init__(self, base_url):
+#         self.base_url = base_url
+#
+#     def get(self,endpoint, params=None):
+#         response = requests.get(f"{self.base_url}/{endpoint}", params=params)
+#         return response.json()
+#
+#     def post(self, endpoint, data):
+#         response = requests.post(f"{self.base_url}/{endpoint}", json=data)
+#         return response.json()
+#
+#
+# client = APIClient("https://jsonplaceholder.typicode.com")
+# print(client.get("posts/1", params={"userId": 1}))
+# print(client.post("posts", data={"title": "foo", "body": "bar", "userId": 1}))
+
+# try:
+#     number = int(input("Enter a number: "))
+#     result = 10 / number
+# except ValueError:
+#     print("Please enter a valid number")
+# except ZeroDivisionError:
+#     print("Cannot divide by zero")
+# else:
+#     print("Result: ", result)
+# finally:
+#     print("Execution completed")
+#
+# import re
+#
+# log_file_path = "sample_log.txt"
+# error_pattern = re.compile(r"Error: (.+)")
+#
+# with open(log_file_path, 'r') as file:
+#     for line in file:
+#         match = error_pattern.search(line)
+#         if match:
+#             print(f"Error_found: {match.group(1)}")
 
 
-@simple_decorator
-def say_hello():
-    print("Hello, World!")
+import os
 
-say_hello()
+directory = "./files"
+for count, filename in enumerate(os.listdir(directory)):
+    new_file = f"file_{count}.txt"
+    os.rename(os.path.join(directory, filename), os.path.join(directory, new_file))
+print("successfully renamed files")
