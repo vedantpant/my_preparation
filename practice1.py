@@ -359,10 +359,10 @@
 #             print(f"Error_found: {match.group(1)}")
 
 
-import os
-
-directory = "./files"
-for count, filename in enumerate(os.listdir(directory)):
-    new_file = f"file_{count}.txt"
-    os.rename(os.path.join(directory, filename), os.path.join(directory, new_file))
-print("successfully renamed files")
+# import os
+#
+# directory = "./files"
+# for count, filename in enumerate(os.listdir(directory)):
+#     new_file = f"file_{count}.txt"
+#     os.rename(os.path.join(directory, filename), os.path.join(directory, new_file))
+# print("successfully renamed files")
