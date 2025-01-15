@@ -61,13 +61,57 @@
 
 # display the longest name
 
-names_list = ["Alice", "Bob", "Catherine", "Elizabeth", "John"]
+# names_list = ["Alice", "Bob", "Catherine", "Elizabeth", "John"]
+#
+#
+# def longest_name(name_list):
+#     if not name_list:
+#         return None
+#     return max(name_list, key=len)
+#
+#
+# print(longest_name(names_list))
+
+# arr1 = [20, 10, 20, 4, 100]
+#
+#
+# def find_largest(arr1):
+#     max = arr1[0]
+#     n = len(arr1)
+#     for i in range(1, n):
+#         if arr1[i] > max:
+#             max = arr1[i]
+#
+#     return max
+#
+#
+# print(find_largest(arr1))
+
+# n = 5
+#
+# def square_sum(n):
+#     sum = 0
+#     for i in range(1, n+1):
+#         sum += i ** 2
+#
+#     return sum
+#
+# print(square_sum(n))
+
+arr1 = [1, 2, 3, 4, 5, 6, 7, 8]
+k = 2
 
 
-def longest_name(name_list):
-    if not name_list:
-        return None
-    return max(name_list, key=len)
+def rotate_left(arr1, k):
+    n = len(arr1)
+    k = k % n
+    return arr1[k:] + arr1[:k]
+
+def rotate_right(arr1, k):
+    n = len(arr1)
+    k = k % n
+    return arr1[-k:] + arr1[:-k]
 
 
-print(longest_name(names_list))
+print(rotate_left(arr1, k))
+print(rotate_right(arr1, k))
