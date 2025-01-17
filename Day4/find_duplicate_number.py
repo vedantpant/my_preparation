@@ -14,7 +14,7 @@ num = [3,1,3,4,2]
 # floyds tortoise and hares
 
 def find_duplicate_number(num):
-    slow, fast = 0
+    slow, fast = 0, 0
 
     while True:
         slow = num[slow]
@@ -23,3 +23,11 @@ def find_duplicate_number(num):
         if slow == fast:
             break
 
+    slow2 = 0
+    while True:
+        slow = num[slow]
+        slow2 = num[slow2]
+        if slow == slow2:
+            return slow
+
+print(find_duplicate_number(num))
