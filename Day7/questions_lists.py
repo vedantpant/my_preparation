@@ -1,20 +1,7 @@
-input_list = [1, 2, 2, 5, 8, 4, 4, 8]
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-def count_unique(input_list):
-    count_unique = {}
-    count = 0
-    lst = []
-    for num in input_list:
-        if num in count_unique:
-            count_unique[num] += 1
-        else:
-            count_unique[num] = 1
-
-    for num, count in count_unique.items():
-        if count_unique[count] == 1:
-            lst.append(num)
-
-    return lst
+for i in range(len(a)):
+    if i % 2 == 0:
+        print(a[i])
 
 
-print(count_unique(input_list))
