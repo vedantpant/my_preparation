@@ -249,28 +249,69 @@ arr = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 #
 # print(segregate0and1(arr))
 
-S = "zero four zero one"
+# S = "zero four zero one"
+#
+# def convert_word_numeric_word(S):
+#
+#     word_dict = {
+#         "one" : 1,
+#         "two" : 2,
+#         "three" : 3,
+#         "four" : 4,
+#         "five" : 5,
+#         "six" : 6,
+#         "seven" : 7,
+#         "eight" : 8,
+#         "nine" : 9,
+#         "zero" : 0
+#     }
+#
+#     numeric_word = ""
+#     word_split = S.split()
+#     for word in word_split:
+#         numeric_word += str(word_dict[word])
+#
+#     return numeric_word
+#
+# print(convert_word_numeric_word(S))
 
-def convert_word_numeric_word(S):
+# s= 'geeksforgeeks is best for geeks'
+# w= 'best'
+#
+# index = 0
+# sentence = s.split()
+# for i, word in enumerate(sentence):
+#     if word == w:
+#         index = i + 1
+#         break
+#
+# print(index)
 
-    word_dict = {
-        "one" : 1,
-        "two" : 2,
-        "three" : 3,
-        "four" : 4,
-        "five" : 5,
-        "six" : 6,
-        "seven" : 7,
-        "eight" : 8,
-        "nine" : 9,
-        "zero" : 0
-    }
-
-    numeric_word = ""
-    word_split = S.split()
-    for word in word_split:
-        numeric_word += str(word_dict[word])
-
-    return numeric_word
-
-print(convert_word_numeric_word(S))
+# from abc import ABC, abstractmethod
+#
+# class Polygon(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+#
+#
+# class Rectangle(Polygon):
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         return self.width * self.height
+#
+# class Triangle(Polygon):
+#     def __init__(self, base, height):
+#         self.base = base
+#         self.height = height
+#
+#     def area(self):
+#         return 0.5 * self.base * self.height
+#
+# rect = Rectangle(10,20)
+# tria = Triangle(25,30)
+# print(f"rect area:{rect.area()}")
+# print(f"tria area:{tria.area()}")
