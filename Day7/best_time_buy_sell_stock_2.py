@@ -1,16 +1,13 @@
 prices = [7,1,5,3,6,4]
 
-def max_profit_2(prices):
-    if not prices:
-        return 0
+def buy_sell_stock_maxProfit(prices):
 
-    total_profit = 0
+    profit = 0
 
     for i in range(1, len(prices)):
         if prices[i] > prices[i - 1]:
-            profit = prices[i] - prices[i - 1]
-            total_profit += profit
+            profit += prices[i] - prices[i - 1]
 
-    return total_profit
+    return profit
 
-print(max_profit_2(prices))
+print(buy_sell_stock_maxProfit(prices))

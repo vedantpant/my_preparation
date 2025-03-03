@@ -315,3 +315,141 @@ arr = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 # tria = Triangle(25,30)
 # print(f"rect area:{rect.area()}")
 # print(f"tria area:{tria.area()}")
+# import pytest
+# class BankAccount:
+#
+#     def __init__(self,account_number, balance=0):
+#         self.__account_number = account_number
+#         self.__balance = balance
+#
+#     def deposit(self,amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             return True
+#         return False
+#
+#     def withdraw(self, amount):
+#         if 0 < amount < self.__balance:
+#             self.__balance -= amount
+#             return True
+#         return False
+#
+#     def get_balance(self):
+#         return self.__balance
+#
+# account = BankAccount("123234325489", 5000)
+# print(account.deposit(500))
+# print(account.withdraw(200))
+# print(account.get_balance())
+#
+# @pytest.fixture
+# def bank_account():
+#     return BankAccount("12343434", 1000)
+#
+# def test_deposit(bank_account):
+#     assert bank_account.deposit(500)
+#     assert bank_account.get_balance() == 1500
+#
+# def test_withdrawal(bank_account):
+#     assert bank_account.withdraw(200)
+#     assert bank_account.get_balance() == 800
+#
+# def test_withdrawal_with_insufficient_balance(bank_account):
+#     assert bank_account.withdraw(2000) is False
+# import unittest
+# class Vehicle:
+#
+#     def __init__(self, brand):
+#         self.brand = brand
+#
+#     def display_info(self):
+#         return f"Vehicle Brand: {self.brand}"
+#
+# class Car(Vehicle):
+#
+#     def __init__(self, brand, model):
+#         super().__init__(brand)
+#         self.model = model
+#
+#     def display_info(self):
+#         return f"Car Brand: {self.brand}, Model: {self.model}"
+#
+# class TestCar(unittest.TestCase):
+#     def setUp(self):
+#         """Set up a Car instance before each test."""
+#         self.car = Car("Toyota", "Corolla")
+#
+#     def test_car_display_info(self):
+#         """Test the display_info method."""
+#         expected_output = "Car Brand: Toyota, Model: Corolla"
+#         self.assertEqual(self.car.display_info(), expected_output)
+#
+# if __name__ == "__main__":
+#     unittest.main()
+
+# class Animal:
+#
+#     def make_sound(self):
+#         return "Some generic sound"
+#
+# class Dog(Animal):
+#     def make_sound(self):
+#         return "Woof!"
+#
+# class Cat(Animal):
+#     def make_sound(self):
+#         return "Meow!"
+#
+# animals = [Dog(), Cat(), Animal()]
+# for animal in animals:
+#     print(animal.make_sound())
+
+# from abc import ABC, abstractmethod
+# import math
+#
+# class Shape(ABC):
+#
+#     @abstractmethod
+#     def area(self):
+#         pass
+#
+# class Rectangle(Shape):
+#
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+#
+#     def area(self):
+#         return self.length * self.width
+#
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+#
+#     def area(self):
+#         return math.pi * self.radius ** 2
+#
+# rect = Rectangle(5, 10)
+# circle = Circle(8)
+#
+# print(rect.area())
+# print(circle.area())
+#
+# import unittest
+#
+# class TestRectangle(unittest.TestCase):
+#     def setUp(self):
+#         """Set up a Rectangle instance before each test."""
+#         self.rect = Rectangle(10, 5)
+#
+#     def test_rectangle_area(self):
+#         """Test the area calculation method."""
+#         self.assertEqual(self.rect.area(), 50)  # ✅ Correct assertion
+#
+#     def test_rectangle_area_float(self):
+#         """Test area with floating-point values."""
+#         rect = Rectangle(14.2, 14.17)
+#         self.assertAlmostEqual(rect.area(), 201.0619, places=0)  # ✅ Handles float precision
+#
+# if __name__ == "__main__":
+#     unittest.main()
