@@ -476,3 +476,129 @@ arr = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 # print("Area:", circle.area())
 # circle.radius = -10
 # print("radius:", circle.radius)
+
+# class Vehicle:
+#     pass
+#
+# car = Vehicle
+# car.wheels = 4
+# car.make = "Toyota"
+# car.model = "camery"
+#
+# print(f"car:{car.make} {car.model}")
+
+# from abc import ABC, abstractmethod
+#
+# class Shape(ABC):
+#
+#     @abstractmethod
+#     def area(self):
+#         pass
+#
+#     def perimeter(self):
+#         pass
+#
+#
+# class Rectangle(Shape):
+#
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         return self.width * self.height
+#
+#     def perimeter(self):
+#         return 2 * (self.width + self.height)
+#
+#
+# class Circle(Shape):
+#
+#     def __init__(self, radius):
+#         self.radius = radius
+#
+#     def perimeter(self):
+#         return 2 * 3.14 * self.radius
+#
+#     def area(self):
+#         return 3.14 * self.radius ** 2
+#
+# rectangle = Rectangle(10, 20)
+# circle = Circle(5)
+# print("Rectangle:", rectangle.area(), rectangle.perimeter())
+# print("Circle:", circle.area(), circle.perimeter())
+
+# class Author:
+#     def __init__(self, name):
+#         self.name = name
+#
+# class Book:
+#     def __init__(self, title, author):
+#         self.title = title
+#         self.author = Author(author)
+#
+#     def display(self):
+#         print(f"Book: {self.title}, Author:{self.author}")
+#
+# book = Book("Python Programming", "John Doe")
+# book.display()
+
+# class Vector:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#     def __add__(self, other):
+#         return Vector(self.x + other.x, self.y + other.y)
+#
+#     def __str__(self):
+#         return f"({self.x}, {self.y})"
+#
+# v1 = Vector(2, 4)
+# v2 = Vector(3, 6)
+# print("Vector Addition:", v1 + v2)
+
+# class Calculator:
+#     @staticmethod
+#     def add(a, b):
+#         return a + b
+#
+#     @classmethod
+#     def multiply(cls, a, b):
+#         return a * b
+#
+# print("Addition:", Calculator.add(2 ,3))
+# print("Multiplication:",Calculator.multiply(2, 4))
+
+class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        if isinstance(value, str) and len(value) > 0:
+            self.__name = value
+        else:
+            print("Invalid name")
+
+    @property
+    def age(self):
+        return self.__age
+
+    @age.setter
+    def age(self, value):
+        if isinstance(value, int) and value >= 0:
+            self.__age = value
+        else:
+            print("Invalid age")
+
+person = Person("vedant pant", 28)
+print("Name:", person.name)
+print("Age:", person.age)
+person.name = ""
+person.age = -10
